@@ -12,7 +12,7 @@ import (
 	. "github.com/puzpuzpuz/xsync"
 )
 
-func TestMapOf_UniqueValuePointers_Int(t *testing.T) {
+func TestMapOf_UniqueValuePointers_Int(_ *testing.T) {
 	EnableAssertions()
 	m := NewMapOf[int]()
 	v := 42
@@ -21,7 +21,7 @@ func TestMapOf_UniqueValuePointers_Int(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMapOf_UniqueValuePointers_Struct(t *testing.T) {
+func TestMapOf_UniqueValuePointers_Struct(_ *testing.T) {
 	type foo struct{}
 	EnableAssertions()
 	m := NewMapOf[foo]()
@@ -31,7 +31,7 @@ func TestMapOf_UniqueValuePointers_Struct(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMapOf_UniqueValuePointers_Pointer(t *testing.T) {
+func TestMapOf_UniqueValuePointers_Pointer(_ *testing.T) {
 	type foo struct{}
 	EnableAssertions()
 	m := NewMapOf[*foo]()
@@ -41,7 +41,7 @@ func TestMapOf_UniqueValuePointers_Pointer(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMapOf_UniqueValuePointers_Slice(t *testing.T) {
+func TestMapOf_UniqueValuePointers_Slice(_ *testing.T) {
 	EnableAssertions()
 	m := NewMapOf[[]int]()
 	v := make([]int, 13)
@@ -50,7 +50,7 @@ func TestMapOf_UniqueValuePointers_Slice(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMapOf_UniqueValuePointers_String(t *testing.T) {
+func TestMapOf_UniqueValuePointers_String(_ *testing.T) {
 	EnableAssertions()
 	m := NewMapOf[string]()
 	v := "bar"
@@ -59,7 +59,7 @@ func TestMapOf_UniqueValuePointers_String(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMapOf_UniqueValuePointers_Nil(t *testing.T) {
+func TestMapOf_UniqueValuePointers_Nil(_ *testing.T) {
 	EnableAssertions()
 	m := NewMapOf[*struct{}]()
 	m.Store("foo", nil)
