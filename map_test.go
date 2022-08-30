@@ -50,7 +50,7 @@ func TestMap_BucketStructSize(t *testing.T) {
 	}
 }
 
-func TestMap_UniqueValuePointers_Int(t *testing.T) {
+func TestMap_UniqueValuePointers_Int(_ *testing.T) {
 	EnableAssertions()
 	m := NewMap()
 	v := 42
@@ -59,7 +59,7 @@ func TestMap_UniqueValuePointers_Int(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMap_UniqueValuePointers_Struct(t *testing.T) {
+func TestMap_UniqueValuePointers_Struct(_ *testing.T) {
 	type foo struct{}
 	EnableAssertions()
 	m := NewMap()
@@ -69,7 +69,7 @@ func TestMap_UniqueValuePointers_Struct(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMap_UniqueValuePointers_Pointer(t *testing.T) {
+func TestMap_UniqueValuePointers_Pointer(_ *testing.T) {
 	type foo struct{}
 	EnableAssertions()
 	m := NewMap()
@@ -79,7 +79,7 @@ func TestMap_UniqueValuePointers_Pointer(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMap_UniqueValuePointers_Slice(t *testing.T) {
+func TestMap_UniqueValuePointers_Slice(_ *testing.T) {
 	EnableAssertions()
 	m := NewMap()
 	v := make([]int, 13)
@@ -88,7 +88,7 @@ func TestMap_UniqueValuePointers_Slice(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMap_UniqueValuePointers_String(t *testing.T) {
+func TestMap_UniqueValuePointers_String(_ *testing.T) {
 	EnableAssertions()
 	m := NewMap()
 	v := "bar"
@@ -97,7 +97,7 @@ func TestMap_UniqueValuePointers_String(t *testing.T) {
 	DisableAssertions()
 }
 
-func TestMap_UniqueValuePointers_Nil(t *testing.T) {
+func TestMap_UniqueValuePointers_Nil(_ *testing.T) {
 	EnableAssertions()
 	m := NewMap()
 	m.Store("foo", nil)

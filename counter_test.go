@@ -50,7 +50,7 @@ func TestCounterReset(t *testing.T) {
 	}
 }
 
-func parallelIncrementor(c *Counter, numIncs int, cdone chan bool) {
+func parallelIncrementor(c *Counter, _ int, cdone chan bool) {
 	for i := 0; i < 10000; i++ {
 		c.Inc()
 	}
